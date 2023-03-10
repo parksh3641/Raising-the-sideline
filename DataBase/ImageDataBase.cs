@@ -1,18 +1,32 @@
+using Sirenix.OdinInspector;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ImageDataBase : MonoBehaviour
+[CreateAssetMenu(fileName = "ImageDataBase", menuName = "ScriptableObjects/ImageDataBase")]
+public class ImageDataBase : ScriptableObject
 {
-    // Start is called before the first frame update
-    void Start()
+    [Title("InCome")]
+    public Sprite[] inComeArray;
+
+    [Title("Ability")]
+    public Sprite[] abilityArray;
+
+    [Title("ToDo")]
+    public Sprite[] toDoArray;
+
+    public Sprite[] GetInComeArray()
     {
-        
+        return inComeArray;
     }
 
-    // Update is called once per frame
-    void Update()
+    public Sprite[] GetAbilityArray()
     {
-        
+        return abilityArray;
+    }
+
+    public Sprite[] GetToDoArray()
+    {
+        return toDoArray;
     }
 }
