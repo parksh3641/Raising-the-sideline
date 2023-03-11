@@ -37,10 +37,10 @@ public class ToDoContent : DataBaseContent
         switch (toDoType)
         {
             case ToDoType.InCome:
-                titleText.text = "수입";
+                titleText.text = "생산";
                 break;
             case ToDoType.Upgrade:
-                titleText.text = "강화";
+                titleText.text = "업그레이드";
                 break;
             case ToDoType.Shop:
                 titleText.text = "상점";

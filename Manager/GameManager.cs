@@ -37,7 +37,10 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
+    }
 
+    private void Start()
+    {
         Initialize();
     }
 

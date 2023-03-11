@@ -34,8 +34,10 @@ public class InComeContent : DataBaseContent
         inComeSprite = imageDataBase.GetInComeArray();
     }
 
-    public void Initialize()
+    public void Initialize(InComeType type)
     {
+        inComeType = type;
+
         icon.sprite = inComeSprite[(int)inComeType];
 
         levelText.text = "Lv. 1";
@@ -43,6 +45,8 @@ public class InComeContent : DataBaseContent
         infoText.text = MoneyUnitString.ToCurrencyString(money) + "/s";
 
         fillAmount.fillAmount = 0;
+
+        GameStart();
     }
 
     public void GameStart()
